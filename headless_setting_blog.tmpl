@@ -1,0 +1,72 @@
+<mtapp:setting id="entry_save_webhook_url_blog" label="記事投稿用webhook URL"
+    hint="記事投稿用WebhookのURLを設定してください" show_hint=1>
+    <input type="text" name="entry_save_webhook_url_blog" id="entry_save_webhook_url_blog"
+        value="<mt:GetVar name="entry_save_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="entry_delete_webhook_url_blog" label="記事削除用webhook URL"
+    hint="記事削除用WebhookのURLを設定してください" show_hint=1>
+    <input type="text" name="entry_delete_webhook_url_blog" id="entry_delete_webhook_url_blog"
+        value="<mt:GetVar name="entry_delete_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="category_save_webhook_url_blog" label="カテゴリ作成・更新webhook URL"
+    hint="カテゴリ作成・更新WebhookのURLを設定してください。" show_hint=1>
+    <input type="text" name="category_save_webhook_url_blog" id="category_save_webhook_url_blog"
+        value="<mt:GetVar name="category_save_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="category_delete_webhook_url_blog" label="カテゴリ削除用webhook URL"
+    hint="カテゴリ削除用のWebhookのURLを設定してください" show_hint=1>
+    <input type="text" name="category_delete_webhook_url_blog" id="category_delete_webhook_url_blog"
+        value="<mt:GetVar name="category_delete_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="site_save_webhook_url_blog" label="サイト作成・更新webhook URL"
+    hint="サイト作成・更新WebhookのURLを設定してください。" show_hint=1>
+    <input type="text" name="site_save_webhook_url_blog" id="site_save_webhook_url_blog"
+        value="<mt:GetVar name="site_save_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="site_delete_webhook_url_blog" label="サイト削除用webhook URL"
+    hint="サイト削除用のWebhookのURLを設定してください" show_hint=1>
+    <input type="text" name="site_delete_webhook_url_blog" id="site_delete_webhook_url_blog"
+        value="<mt:GetVar name="site_delete_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="asset_save_webhook_url_blog" label="アセット作成・更新webhook URL"
+    hint="アセット作成・更新WebhookのURLを設定してください。" show_hint=1>
+    <input type="text" name="asset_save_webhook_url_blog" id="asset_save_webhook_url_blog"
+        value="<mt:GetVar name="asset_save_webhook_url_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="asset_delete_webhook_url_blog" label="アセット削除用webhook URL"
+    hint="アセット削除用のWebhookのURLを設定してください" show_hint=1>
+    <input type="text" name="asset_delete_webhook_url_blog" id="asset_delete_webhook_url_blog"
+        value="<mt:GetVar name="asset_delete_webhook_url_blog">" />
+</mtapp:setting>
+
+
+<mtapp:setting id="aws_access_key_id_blog" label="ACCESS_KEY_ID"
+    hint="S3用のAWS_ACCESS_KEY_IDを設定してください" show_hint=1>
+    <input type="text" name="aws_access_key_id_blog" id="aws_access_key_id_blog"
+        value="<mt:GetVar name="aws_access_key_id_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="aws_secret_access_key_blog" label="SECRET_ACCESS_KEY"
+    hint="S3アップロード用のAWS_SECRET_ACCESS_KEYを設定してください" show_hint=1>
+    <input type="text" name="aws_secret_access_key_blog" id="aws_secret_access_key_blog"
+        value="<mt:GetVar name="aws_secret_access_key_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="aws_region_blog" label="Region"
+    hint="S3用アップロード用のリージョンを設定してください。ex) ap-northeast-1" show_hint=1>
+    <input type="text" name="aws_region_blog" id="aws_region_blog"
+        value="<mt:GetVar name="aws_region_blog">" />
+</mtapp:setting>
+
+<mtapp:setting id="aws_bucket_blog" label="Bucket"
+    hint="s3アップロードのバケット名を設定してください" show_hint=1>
+    <input type="text" name="aws_bucket_blog" id="aws_bucket_blog"
+        value="<mt:GetVar name="aws_bucket_blog">" />
+</mtapp:setting>

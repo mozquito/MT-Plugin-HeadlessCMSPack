@@ -1,0 +1,94 @@
+id: HeadlessCMSPack
+name: HeadlessCMSPack
+version: 0.01
+author_link: http://www.movabletype.org/
+author_name: mozquito
+description: s3画像アップロード機能、サイトの静的ファイル生成停止機能、投稿時のwebhook機能をまとめたMovableTypeをHeadlessCMSとして使いたい人のプラグインです
+system_config_template: headless_setting_system.tmpl
+blog_config_template: headless_setting_blog.tmpl
+settings:
+    entry_save_webhook_url_blog:
+        default:
+        scope: blog
+    entry_delete_webhook_url_blog:
+        default:
+        scope: blog
+    category_save_webhook_url_blog:
+        default:
+        scope: blog
+    category_delete_webhook_url_blog:
+        default:
+        scope: blog
+    asset_save_webhook_url_blog:
+        default:
+        scope: blog
+    asset_delete_webhook_url_blog:
+        default:
+        scope: blog
+    site_save_webhook_url_blog:
+        default:
+        scope: blog
+    site_delete_webhook_url_blog:
+        default:
+        scope: blog
+    entry_save_webhook_url_system:
+        default:
+        scope: system
+    entry_delete_webhook_url_system:
+        default:
+        scope: system
+    category_save_webhook_url_system:
+        default:
+        scope: system
+    category_delete_webhook_url_system:
+        default:
+        scope: system
+    asset_save_webhook_url_system:
+        default:
+        scope: system
+    asset_delete_webhook_url_system:
+        default:
+        scope: system
+    site_save_webhook_url_system:
+        default:
+        scope: system
+    site_delete_webhook_url_system:
+        default:
+        scope: system
+    aws_access_key_id_blog:
+        default:
+        scope: blog
+    aws_secret_access_key_blog:
+        default:
+        scope: blog
+    aws_region_blog:
+        default:
+        scope: blog
+    aws_bucket_blog:
+        default:
+        scope: blog
+    aws_access_key_id_system:
+        default:
+        scope: system
+    aws_secret_access_key_system:
+        default:
+        scope: system
+    aws_region_system:
+        default:
+        scope: system
+    aws_bucket_system:
+        default:
+        scope: system
+callbacks:
+    cms_upload_image: $HeadlessCMSPack::HeadlessCMSPack::Callback::s3upload
+    build_file_filter: $HeadlessCMSPack::HeadlessCMSPack::Callback::nobuild
+    MT::App::CMS::cms_post_save.entry: $HeadlessCMSPack::HeadlessCMSPack::Callback::entrySaveWebhook
+    MT::App::CMS::cms_post_save.page: $HeadlessCMSPack::HeadlessCMSPack::Callback::entrySaveWebhook
+    MT::App::CMS::cms_post_delete.entry: $HeadlessCMSPack::HeadlessCMSPack::Callback::entryDeleteWebhook
+    MT::App::CMS::cms_post_delete.page: $HeadlessCMSPack::HeadlessCMSPack::Callback::entryDeleteWebhook
+    MT::App::CMS::cms_post_save.asset: $HeadlessCMSPack::HeadlessCMSPack::Callback::assetSaveWebhook
+    MT::App::CMS::cms_post_delete.asset: $HeadlessCMSPack::HeadlessCMSPack::Callback::assetDeleteWebhook
+    MT::App::CMS::cms_post_save.category: $HeadlessCMSPack::HeadlessCMSPack::Callback::categorySaveWebhook
+    MT::App::CMS::cms_post_delete.category: $HeadlessCMSPack::HeadlessCMSPack::Callback::categoryDeleteWebhook
+    MT::App::CMS::cms_post_save.website: $HeadlessCMSPack::HeadlessCMSPack::Callback::siteSaveWebhook
+    MT::App::CMS::cms_post_delete.website: $HeadlessCMSPack::HeadlessCMSPack::Callback::siteDeleteWebhook
